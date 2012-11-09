@@ -406,7 +406,9 @@ PATH=$PATH:$HOME/bin
 
 export JAVA_HOME=/usr/java/latest
 export PATH=$PATH:$JAVA_HOME/bin
-export CLASSPATH=.:$JAVA_HOME/jre/lib:$JAVA_HOME/lib:$JAVA_HOME/lib/tools.jar
+#export CLASSPATH=.:$JAVA_HOME/jre/lib:$JAVA_HOME/lib:$JAVA_HOME/lib/tools.jar
+export TMP="/root/ide/hadoop-2.0.0-mr1-cdh4.1.1"
+export CLASSPATH=.:$JAVA_HOME/jre/lib:$JAVA_HOME/lib:$JAVA_HOME/lib/tools.jar:$TMP/hadoop-ant-2.0.0-mr1-cdh4.1.1.jar:$TMP/hadoop-core-2.0.0-mr1-cdh4.1.1.jar:$TMP/hadoop-core-2.0.0-mr1-cdh4.1.1.jar:$TMP/hadoop-test-2.0.0-mr1-cdh4.1.1.jar:$TMP/hadoop-tools-2.0.0-mr1-cdh4.1.1.jar
 
 export HADOOP_HOME=/usr/lib/hadoop
 export PATH=$PATH:$HADOOP_HOME/bin
@@ -423,6 +425,19 @@ export PATH=$PATH:$GIT_PROXY_COMMAND
 export GLOBAL=/usr/local/bin/global
 export PATH=$PATH:$GLOBAL
 
+export ANT_HOME=/usr/share/ant
+export ANT=$ANT_HOME/bin
+export PATH=$PATH:$ANT
+export IVY_HOME=/usr/share/ivy
+export IVY=$M2_HOME/bin
+export PATH=$IVY:$PATH
+export M2_HOME=/usr/share/maven
+export M2=$M2_HOME/bin
+export PATH=$M2:$PATH
+
+#export CLASSPATH=.:$JAVA_HOME/jre/lib:$JAVA_HOME/lib:$JAVA_HOME/lib/tools.jar
+
 export http_proxy=http://10.68.1.235:8081
 export https_proxy=http://10.68.1.235:8081
+export MAVEN_OPTS="-Dhttps.proxyHost=10.68.1.235 -Dhttps.proxyPort=8081 -Dhttp.proxyHost=10.68.1.235 -Dhttp.proxyPort=8081"
 
